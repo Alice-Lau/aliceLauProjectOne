@@ -89,7 +89,8 @@ input {
 /* header styles */
 /************************************************************/
 header .wrapper {
-    background: url("../assets/shoeHero2x.png") no-repeat 30% center;
+    background: url("../assets/shoeHero2x.png") no-repeat;
+    background-position: 30% center;
     background-size: cover;
     min-height: 95vh;
     /* Fatima suggested a min-height < 100vh to notify the user for scrollable content */
@@ -129,7 +130,7 @@ h1 {
     line-height: 6.75rem;
     margin-top: calc( 47.5vh - 8rem/2 );
     margin-left: 41%;
-    padding: 20px;
+    padding: 20px 10px 10px 20px;
 }
 
 /* Social Media Navigation */
@@ -394,21 +395,37 @@ footer p:last-child {
 /************************************************************/
 @media (max-width: 1430px) {
     h1 {
-        font-size: 7rem;
-        line-height: 5.9rem;
+        width: 38%;
+    }
+
+    .topNav {
+        width: 50%;
     }
 }
 
 @media (max-width: 1360px) {
     h1 {
-        font-size: 6.5rem;
-        line-height: 5.5rem;
+        font-size: 7rem;
+        line-height: 5.88rem;
+    }
+
+    .specialize .textContent {
+        padding: 100px 80px 100px 100px;
+    }
+
+    .footCare .textContent {
+        padding: 100px 100px 100px 80px;
     }
 }
 
-@media (max-width: 1220px) {
+@media (max-width: 1230px) {
     h1 {
-        width: 39%;
+        width: 40%;
+    }
+
+    .specialize .textContent,
+    .footCare .textContent {
+        padding: 80px;
     }
 
     .givingImg {
@@ -420,29 +437,32 @@ footer p:last-child {
     }
 }
 
-@media (max-width: 1110px) {
+@media (max-width: 1160px) {
     h1 {
-        width: 43%;
+        font-size: 6.3rem;
+        line-height: 5.3rem;
     }
 
-    .nav {
-        width: 60%;
-    }
-
-    .innerWrapMoreSelect {
-        width: 60%;
+    .specialize .textContent,
+    .footCare .textContent {
+        padding: 50px;
     }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1050px) {
+    h1 {
+        width: 43%;
+        font-size: 6rem;
+        line-height: 5.04rem;
+    }
 
+    .specialize .textContent,
+    .footCare .textContent {
+        padding: 30px;
+    }
 }
 
 @media (max-width: 1010px) {
-    h1 {
-        width: 48%;
-    }
-
     .givingImg {
         width: calc( 40% - 20px );
     }
@@ -450,214 +470,237 @@ footer p:last-child {
     .givingTxt {
         width: calc( 60% - 20px );
     }
+}
 
-    .innerWrapMoreSelect {
+@media (max-width: 936px) {
+    h1 {
+        width: 45%;
+        font-size: 5.5rem;
+        line-height: 4.62rem;
+    }
+
+    .topNav {
         width: 70%;
     }
 
-    input[type=email] {
-        width: 60%;
-    }
-
-    input[type=submit] {
-        width: 40%;
-    }
-}
-
-@media (max-width: 910px) {
-    h1{
-        font-size: 6rem;
-        line-height: 5.1rem;
-    }
-}
-
-@media (max-width: 890px) {
-    .innerWrapGiving {
-        width: 90%;
-    }
-
-    .gramGallery {
-        width: 90%;
+    .specialize .textContent,
+    .footCare .textContent {
+        padding: 20px;
     }
 }
 
 @media (max-width: 850px) {
-    header .wrapper {
-        background-position: 30% center;
+    .textContent,
+    .image {
+        width: 100%;
     }
 
-    h1 {
-        font-size: 5.5rem;
-        line-height: 4.6rem;
+    .textContent {
+        text-align: center;
     }
 
-    .innerWrapGiving {
+    .image img {
+        height: 50vh;
+        object-fit: cover;
+        object-position: 30%;
+    }
+
+    .mobileImg {
+        display: block;
+    }
+
+    .desktopImg {
+        display: none;
+    }
+
+    .specialize .textContent,
+    .footCare .textContent {
+        padding: 80px;
+    }
+
+    .innerWrapper {
         width: 95%;
     }
 
-    .innerWrapMoreSelect {
-        width: 80%;
+    .givingImg {
+        width: calc( 45% - 10px);
+        margin-right: 10px;
     }
 
-    input[type=email],
-    input[type=submit] {
-        width: 100%;
+    .givingTxt {
+        width: calc( 55% - 10px);
+        margin-left: 10px;
     }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 820px) {
     h1 {
+        width: 48%;
         font-size: 5rem;
         line-height: 4.2rem;
     }
 }
 
-@media (max-width: 715px) {
-    h1{
-        width: 50%;
-        margin-left: 35%;
+@media (max-width: 750px) {
+    h1 {
+        font-size: 4.5rem;
+        line-height: 3.78rem;
     }
 }
 
 @media (max-width: 700px) {
-    h1 {
-        width: 55%;
+    .givingImg,
+    .givingTxt {
+        width: 100%;
     }
 
-    .innerWrapMoreSelect {
-        width: 90%;
+    .givingImg {
+        margin-right: 0;
     }
-    
-    .footNav {
-        width: 80%;
+
+    .givingTxt {
+        margin-left: 0;
+        padding: 45px 60px 30px;
     }
-    
-    .contactInfo,
-    .subscription {
-        width: 100%;
+
+    .givingTxt h2,
+    .givingTxt .readMore {
         text-align: center;
     }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 650px) {
+    h1 {
+        background-position: 35% center;
+        margin-left: 38%;
+        width: 51%;
+    }
+}
+
+@media (max-width: 610px) {
     .topNav,
-    .navMedia {
+    .navMedia,
+    .hamburger input {
         visibility: hidden;
     }
 
     .hamburger {
-        padding: 20px;
-        visibility: visible;
+        display: block;
     }
 
     .hamburgerLabel {
-        width: 10%;
-        float: right;
-    }
-
-    .hamburger input {
+        width: 8%;
         position: absolute;
-        left: -999px;
+        top: 20px;
+        right: 10px;
     }
 
     h1 {
-        width: 60%;
-        font-size: 4.7rem;
-        line-height: 4.4rem;
-    }
-
-    .givingImg, 
-    .givingTxt {
-        width: 100%;
-        margin: 0;
-    }
-
-    .givingTxt h2,
-    .givingTxt a {
-        margin-top: 50px;
-    }
-
-    .innerWrapMoreSelect {
-        width: 50%;
-    }
-
-    .selection {
-        width: 100%;
-    }
-
-    .gramGallery {
-        width: 95%;
-    }
-
-    .galleryImg:last-child {
-        display: none;
-    }
-
-    .galleryImg:nth-child(2) {
-        margin-right: 0;
-    }
-
-    .galleryImg {
-        width: calc(50% - 18px);
+        margin-top: 30vh;
+        font-size: 4rem;
+        line-height: 3.36rem;
     }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 550px) {
     h1 {
-        width: 65%;
-        margin-left: 30%;
-        padding:
+        margin-left: 35%;
+        width: 57%;
+    }
+
+    .image img {
+        height: 38vh;
+    }
+
+    .specialize .textContent,
+    .footCare .textContent {
+        padding: 80px 32px;
     }
 }
 
 @media (max-width: 500px) {
-    h1 {
-        width: 68%;
-        margin-left: 30%;
+    header .wrapper {
+        background-position: 33% center;
     }
 
-    .innerWrapMoreSelect {
-        width: 70%;
+    h1 {
+        width: 60%;
+        margin-left: 28%;
+        font-size: 3.5rem;
+        line-height: 2.94rem;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 460px) {
+    header .wrapper {
+        background-position: 32% center;
+        background-size: cover;
+        min-height: 95vh;
+    }
+
     h1 {
-        width: 73%;
-        margin-left: 23%;
+        width: 60%;
+        margin-top: 32vh;
+        margin-left: 32%;
+        font-size: 3.3rem;
+        line-height: 2.77rem;
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
+    header .wrapper {
+        background-position: 31% center
+    }
+
     h1 {
-        font-size: 4.4rem;
-        line-height: 4.1rem;
+        margin-top: 30vh;
+        margin-left: 33%;
+        padding: 10px;
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 380px) {
     h1 {
-        width: 75%;
-        margin-left: 15%;
+        width: 65%;
+        margin-left: 31%;;
+    }
+
+    .givingTxt {
+        padding: 45px 20px 30px;
     }
 }
 
-@media (max-width: 410px) {
+@media (mx-width: 350px) {
+    h1 {
+        width: 71%;
+        margin-left: 28%;
+    }
 
+    h2 {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 320px) {
     header .wrapper {
-        min-height: 71vh;
-        background-size: 300%
-        background-position: 30% top;
+        background-size: 329%;
+        min-height: 498px;
     }
 
     h1 {
-        width: 77%;
-        margin-left: 20%;
-        font-size: 3.7rem;
-        line-height: 3.4rem;
-        margin-top: calc( 35vh - 3.7rem/2 )
+        width: 72%;
+        margin-top: 154px;
+        margin-left: 25%;
+        font-size: 3.1rem;
+        line-height: 2.6rem;
+    }
+
+    .image img {
+        height: 205px;
+    }
+
+    .specialize .textContent, 
+    .footCare .textContent {
+        padding: 35px 32px 60px;
     }
 }
