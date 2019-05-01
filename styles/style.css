@@ -22,8 +22,15 @@ html {
 
 h1,
 h2,
-h3 {
+h3,
+a {
     font-family: 'Nova Flat', cursive;
+}
+
+h1,
+h2,
+.readMore a {
+    color: #186684;
 }
 
 h2,
@@ -59,32 +66,41 @@ img {
     margin: 0 auto;
 }
 
-/* .nav,
+.nav,
 section p,
 .contactInfo a,
 input {
     font-size: 1.1rem;
     line-height: 1.6rem;
-} */
-
+}
 
 .nav {
     width: 22%;
     margin: 0 auto;
-    font-family: 'Nova Flat', cursive;
-    font-size: 1.1rem;
-    line-height: 1.6rem;
 }
 
+.innerWrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+/* placed "margin: 0 auto" on .wrapper, .nav, & .innerWrapper to have more clear reference for later changes */
+
+/************************************************************/
 /* header styles */
+/************************************************************/
 header .wrapper {
-    background: url("../assets/shoeHero2x.png") no-repeat center center;
+    background: url("../assets/shoeHero2x.png") no-repeat 30% center;
     background-size: cover;
-    min-height: 100vh;
-    width: 100%;
+    min-height: 95vh;
+    /* Fatima suggested a min-height < 100vh to notify the user for scrollable content */
     position: relative;
 }
 
+.hamburger {
+    display: none;
+}
+
+/* Top Navigation */
 .topNav {
     padding-top: 20px;
 }
@@ -97,8 +113,8 @@ header .wrapper {
 }
 
 .topNav a {
-    margin: 0 5px;
-    padding: 3px 3px;
+    /* margin: 0 5px; */
+    padding: 5px 5px;
     color: #186684;
 }
 
@@ -106,19 +122,26 @@ header .wrapper {
     color: #e85b26;
 }
 
-.hamburger {
-    display: none;
-}
-
 h1 {
     background: rgba(227, 228, 234, 0.89);
     width: 36%;
-    color: #186684;
     font-size: 8rem;
     line-height: 6.75rem;
-    margin-top: calc( 50vh - 8rem/2 );
+    margin-top: calc( 47.5vh - 8rem/2 );
     margin-left: 41%;
     padding: 20px;
+}
+
+/* Social Media Navigation */
+.navMedia {
+    position: absolute; /* relative to header .wrapper */
+    top: 30vh;
+    right: 2vw;
+}
+
+.navMedia li {
+    text-align: center;
+    margin: 20px 0;
 }
 
 .navMedia a {
@@ -129,48 +152,42 @@ h1 {
     color: #186684;
 }
 
-.navMedia {
-    position: absolute;
-    top: 30vh;
-    right: 2vw;
-}
+/************************************************************/
+/* main styles */
+/************************************************************/
 
-.navMedia li {
-    text-align: center;
-    margin: 20px 0;
-}
-
-/* main style */
+/* 2x2 grid sections */
 h2 {
     margin-top: 0;
     margin-bottom: 11px;
-    color: #186684;
 }
 
 section p {
     margin: 0;
     color: #1f2022;
-    font-size: 1.1rem;
-    line-height: 1.6rem;
 }
 
 .readMore {
     padding-top: 35px; 
 }
-/* asked Adam and he suggested to use this to adjust the space between the <p> and <a> */
+/* I asked to try an alternative way to adjust space between <p> and <a> without changing the dispaly property of <a>. Adam suggested to use this to adjust the space between the <p> and <a> */
 
 .readMore a {
     padding: 9px 12px;
-    font-family: 'Nova Flat', cursive;
     font-size: 1.3rem;
     line-height: 1.5rem;
-    color: #186684;
     border: 3px solid #e85b26;
 }
+
+.mobileImg {
+    display: none;
+}
+/* for switching order of content in mobile view */
 
 .image {
     font-size: 0;
 }
+/* removing ghost space under <img> */
 
 .textContent,
 .image {
@@ -178,26 +195,25 @@ section p {
     float: left;
 }
 
-/* section specialize */
-.mobileImg {
-    display: none;
+.specialize .textContent {
+    padding: 140px 80px 120px 120px;
+}
+
+.footCare .textContent {
+    padding: 140px 120px 120px 80px;
 }
 
 .footCare {
-    clear: left;
+    clear: both;
 }
 
-/* section givingBack */
+/* section .givingBack */
 .givingBack {
     background: #f4f4f4;
-    clear: left;
+    clear: both;
     padding: 100px 0;
 }
-
-.innerWrapGiving {
-    width: 80%;
-    margin: 0 auto;
-}
+/* kept "clear: both" separated from .footCare for clear section division */
 
 .givingImg,
 .givingTxt {
@@ -262,11 +278,6 @@ section p {
     padding: 87px 0;
 }
 
-.gramGallery {
-    width: 80%;
-    margin: 0 auto;
-}
-
 .galleryImg {
     margin: 0 18px;
     width: calc( 33.33% - 24px );
@@ -281,7 +292,9 @@ section p {
     margin-right: 0;
 }
 
+/************************************************************/
 /* footer styles */
+/************************************************************/
 footer .wrapper {
     background: #eeeeee;
     padding-top: 90px;
@@ -301,13 +314,11 @@ footer .wrapper {
     color: #e85b26;
 }
 
-.footerInnerWrap {
-    width: 80%;
-    margin: 0 auto;
+.innerWrapFooter {
     padding-bottom: 90px;
 }
 
-.footerInnerWrap h3 {
+.innerWrapFooter h3 {
     color: #e85b26;
     margin: 30px 0 15px;
 }
@@ -320,8 +331,6 @@ footer .wrapper {
 
 .contactInfo a {
     font-family: 'Catamaran', sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.6rem;
     color: #1f2022;
 }
 
@@ -343,8 +352,6 @@ footer .wrapper {
 
 input {
     height: 45px;
-    font-size: 1.1rem;
-    line-height: 1.6rem;
     border: none;
     float: left;
 }
@@ -354,6 +361,7 @@ input[type=email] {
     padding: 0 30px;
     font-family: 'Catamaran', sans-serif;
     color: rgb(35, 35, 35, 1);
+    /* tried to make placeholder text opacity = 1, but no success  */
 }
 
 input[type=submit] {
@@ -362,22 +370,28 @@ input[type=submit] {
     font-family: 'Nova Flat', cursive;
     color: #ffffff;
     text-transform: uppercase;
+    border: 3px inset #fa3d06;
 }
 
 input[type=submit]:hover {
-    border: 3px inset #fa3d06;
+    background: #fa3d06;
+    border: 3px inset #186684;
+    /* consulted with Fatima */
 }
 
 footer p:last-child {
     background: #000000;
+    margin: 0;
     font-size: 1rem;
     font-weight: 600;
-    margin: 0;
-    text-align: center;
     line-height: 1.6rem;
     color: #fcfcfc;
+    text-align: center;
 }
 
+/************************************************************/
+/* media queries */
+/************************************************************/
 @media (max-width: 1430px) {
     h1 {
         font-size: 7rem;
@@ -458,20 +472,6 @@ footer p:last-child {
 }
 
 @media (max-width: 890px) {
-    .image,
-    .textContent {
-        width: 100%;
-        float: none;
-    }
-
-    .textContent {
-        text-align: center;
-    }
-
-    .desktopImg {
-        display: none;
-    }
-
     .innerWrapGiving {
         width: 90%;
     }
@@ -639,5 +639,25 @@ footer p:last-child {
     h1 {
         width: 75%;
         margin-left: 15%;
+    }
+}
+
+@media (max-width: 410px) {
+
+}
+
+@media (max-width: 320px) {
+    header .wrapper {
+        min-height: 71vh;
+        background-size: 300%
+        background-position: 30% top;
+    }
+
+    h1 {
+        width: 77%;
+        margin-left: 20%;
+        font-size: 3.7rem;
+        line-height: 3.4rem;
+        margin-top: calc( 35vh - 3.7rem/2 )
     }
 }
