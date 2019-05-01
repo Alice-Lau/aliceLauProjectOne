@@ -508,6 +508,7 @@ footer p:last-child {
 @media (max-width: 850px) {
     .textContent,
     .image {
+        float: none;
         width: 100%;
     }
 
@@ -571,6 +572,7 @@ footer p:last-child {
 @media (max-width: 700px) {
     .givingImg,
     .givingTxt {
+        float:none;
         width: 100%;
     }
 
@@ -592,18 +594,15 @@ footer p:last-child {
         width: 45%;
     }
 
-    .selection {
-        width: 100%;
-        margin: 20px auto;
-    }
-
-    .selection {
-        width: 100%
-    }
-
+    .selection,
     input[type=email],
     input[type=submit] {
+        float: none;
         width: 100%;
+    }
+
+    .selection {
+        margin: 20px auto;
     }
 }
 
@@ -625,6 +624,7 @@ footer p:last-child {
 
     .contactInfo,
     .subscription {
+        float: none;
         width: 100%;
         text-align: center;
     }
